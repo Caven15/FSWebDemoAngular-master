@@ -45,7 +45,6 @@ import { ExoFormulaireComponent } from './exercices/exo-formulaire/exo-formulair
     DemoServiceComponent,
     ProductListComponent,
     FormulaireComponent,
-    ExoFormulaireComponent
   ],
   imports: [
     BrowserModule,
