@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Demo1Component } from './demo/demo1/demo1.component';
 import { Exercice1Component } from './exercices/exercice1/exercice1.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -21,6 +21,7 @@ import { ExoBouttonClickComponent } from './exercices/exo-boutton-click/exo-bout
 import { ExoBouttonClickParentComponent } from './exercices/exo-boutton-click-parent/exo-boutton-click-parent.component';
 import { DemoServiceComponent } from './demo/demo-service/demo-service.component';
 import { ProductListComponent } from './exercices/product-list/product-list.component';
+import { FormulaireComponent } from './demo/formulaire/formulaire.component';
 
 
 @NgModule({
@@ -41,13 +42,15 @@ import { ProductListComponent } from './exercices/product-list/product-list.comp
     ExoBouttonClickComponent,
     ExoBouttonClickParentComponent,
     DemoServiceComponent,
-    ProductListComponent
+    ProductListComponent,
+    FormulaireComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

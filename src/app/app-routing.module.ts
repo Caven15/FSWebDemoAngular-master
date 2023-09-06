@@ -9,10 +9,10 @@ import { DemoDirectiveComponent } from './demo/demo-directive/demo-directive.com
 import { ArticleListeDirectiveComponent } from './exercices/article-liste-directive/article-liste-directive.component';
 import { ParentComponentComponent } from './demo/demoInputOutput/parent-component/parent-component.component';
 import { ParentComponent } from './demo/demoInputOutput/v-2/parent/parent.component';
-import { ExoBouttonClickComponent } from './exercices/exo-boutton-click/exo-boutton-click.component';
 import { ExoBouttonClickParentComponent } from './exercices/exo-boutton-click-parent/exo-boutton-click-parent.component';
 import { DemoServiceComponent } from './demo/demo-service/demo-service.component';
 import { ProductListComponent } from './exercices/product-list/product-list.component';
+import { FormulaireComponent } from './demo/formulaire/formulaire.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'demo-directive', component: DemoDirectiveComponent },
   { path: 'demo-input-output', component: ParentComponentComponent },
   { path: 'demo-input-output-V-2', component: ParentComponent },
+  { path : 'demo-formulaire', component : FormulaireComponent},
   { path : 'demo-service', component : DemoServiceComponent},
   { path: 'exercice1', component: Exercice1Component },
   { path: 'exercice2', component: Exercice2Component },
