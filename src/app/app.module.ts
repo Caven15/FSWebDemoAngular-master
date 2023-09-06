@@ -22,7 +22,6 @@ import { ExoBouttonClickParentComponent } from './exercices/exo-boutton-click-pa
 import { DemoServiceComponent } from './demo/demo-service/demo-service.component';
 import { ProductListComponent } from './exercices/product-list/product-list.component';
 import { FormulaireComponent } from './demo/formulaire/formulaire.component';
-import { ExoFormulaireComponent } from './exercices/exo-formulaire/exo-formulaire.component';
 
 
 @NgModule({

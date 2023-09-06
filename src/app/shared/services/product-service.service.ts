@@ -15,7 +15,7 @@ export class ProductServiceService {
     this._products.push(newProduit)
   }
 
-  // R => Read
+  // R => Reads
   getProduits() : Product[]{
     return this._products;
   }

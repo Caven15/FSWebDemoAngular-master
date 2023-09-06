@@ -28,8 +28,10 @@ const routes: Routes = [
   { path: 'exercice2', component: Exercice2Component },
   { path: 'article-liste-directive', component: ArticleListeDirectiveComponent },
   { path: 'exo-boutton-click', component: ExoBouttonClickParentComponent },
-  { path: 'product-list', component: ProductListComponent}
+  { path: 'product-list', component: ProductListComponent},
 ];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
