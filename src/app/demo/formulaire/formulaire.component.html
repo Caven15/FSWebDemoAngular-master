@@ -1,34 +1,44 @@
+<!-- Le champset pour regrouper les éléments du formulaire -->
 <fieldset>
-  <legend>Démnonstrations formulaire</legend>
+  <legend>Démonstrations formulaire</legend> <!-- Légende du champset -->
+
+  <!-- Définition du formulaire réactif, lié au FormGroup 'ajoutForm' et avec l'événement de soumission (ngSubmit) qui appelle 'submitForm()' -->
   <form [formGroup]="ajoutForm" (ngSubmit)="submitForm()">
+
+    <!-- Champ pour le nom -->
     <div>
-      <label for="nom">Nom </label>
-      <input type="text" formControlName="nom" id="nom">
+      <label for="nom">Nom </label> <!-- Étiquette du champ -->
+      <input type="text" formControlName="nom" id="nom"> <!-- Champ de texte lié au FormControl 'nom' -->
     </div>
 
+    <!-- Champ pour la description -->
     <div>
-      <label for="description">Description </label>
-      <input type="text" formControlName="description" id="description">
-      <p *ngIf="!ajoutForm.get('description').valid" class="error-form">
-        La description ne remplis pas les condition requises.
+      <label for="description">Description </label> <!-- Étiquette du champ -->
+      <input type="text" formControlName="description" id="description"> <!-- Champ de texte lié au FormControl 'description' -->
+      <p *ngIf="!ajoutForm.get('description')?.valid" class="error-form">
+        La description ne remplit pas les conditions requises. <!-- Message d'erreur affiché conditionnellement si le champ 'description' est invalide -->
       </p>
     </div>
 
+    <!-- Champ pour l'e-mail -->
     <div>
-      <label for="email">e-mail</label>
-      <input type="text" formControlName="email" id="email">
-      <p *ngIf="!ajoutForm.get('email').valid" class="error-form">
-        Le nom de domaine doit finir pas gmail.com
+      <label for="email">E-mail</label> <!-- Étiquette du champ -->
+      <input type="text" formControlName="email" id="email"> <!-- Champ de texte lié au FormControl 'email' -->
+      <p *ngIf="ajoutForm.get('email')?.hasError('invalidDomain')" class="error-form">
+        Le nom de domaine doit finir par gmail.com <!-- Message d'erreur affiché conditionnellement si le champ 'email' est invalide -->
       </p>
     </div>
 
+    <!-- Champ pour le prix -->
     <div>
-      <label for="prix">Prix </label>
-      <input type="number" formControlName="prix" id="prix">
+      <label for="prix">Prix </label> <!-- Étiquette du champ -->
+      <input type="number" formControlName="prix" id="prix"> <!-- Champ de nombre lié au FormControl 'prix' -->
     </div>
 
+    <!-- Bouton de soumission du formulaire -->
     <div>
       <button type="submit" [disabled]="!ajoutForm.valid">Ajouter</button>
+      <!-- Le bouton est désactivé (attribut 'disabled') si le formulaire n'est pas valide -->
     </div>
   </form>
 </fieldset>

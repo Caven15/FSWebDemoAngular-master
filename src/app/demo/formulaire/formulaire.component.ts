@@ -21,10 +21,10 @@ export class FormulaireComponent {
   ngOnInit(){
     console.log("Start du component formulaire...")
     this.ajoutForm = this._nomFormBuilder.group({
-      nom : [null, Validators.required],
+      nom : ['', Validators.required],
       description : ["test", Validators.required],
-      email : [null, Validators.required, customValidators.customDomainValidator('gmail.com')],
-      prix : [null, Validators.required],
+      email: ['', [Validators.required, customValidators.customDomainValidator('gmail.com')]],
+      prix : [0, Validators.required],
     });
   }
 

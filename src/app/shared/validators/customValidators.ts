@@ -1,13 +1,13 @@
-import { FormControl } from "@angular/forms";
+import { AbstractControl, FormControl, ValidationErrors, ValidatorFn } from "@angular/forms";
 
 export class customValidators{
-  static customDomainValidator(domain : string){
-    return (control : FormControl) => {
+  static customDomainValidator(domain: string) {
+    return (control: FormControl) => {
       const email = control.value as string;
-      if (email && !email.endsWith(`@${domain}`) ) {
-        return {invalidDomain : true}
+      if (email && !email.endsWith(`@${domain}`)) {
+        return { invalidDomain: true };
       }
       return null;
-    }
+    };
   }
 }
