@@ -23,6 +23,8 @@ import { DemoServiceComponent } from './demo/demo-service/demo-service.component
 import { ProductListComponent } from './exercices/product-list/product-list.component';
 import { ExoFormulaireComponent } from './exercices/exo-formulaire/exo-formulaire.component';
 import { FormulaireComponent } from './demo/formulaire/formulaire.component';
+import { RoutingComponent } from './demo/routing/routing.component';
+import { ConsoActivatedRouteComponent } from './demo/conso-activated-route/conso-activated-route.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { FormulaireComponent } from './demo/formulaire/formulaire.component';
     DemoServiceComponent,
     ProductListComponent,
     ExoFormulaireComponent,
+    RoutingComponent,
+    ConsoActivatedRouteComponent,
   ],
   imports: [
     BrowserModule,

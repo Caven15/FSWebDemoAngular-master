@@ -1,6 +1,7 @@
 import { AbstractControl, FormControl, ValidationErrors, ValidatorFn } from "@angular/forms";
 
 export class customValidators{
+
   static customDomainValidator(domain: string) {
     return (control: FormControl) => {
       const email = control.value as string;
@@ -10,4 +11,5 @@ export class customValidators{
       return null;
     };
   }
+  
 }

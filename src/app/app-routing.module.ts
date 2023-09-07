@@ -14,9 +14,12 @@ import { DemoServiceComponent } from './demo/demo-service/demo-service.component
 import { ProductListComponent } from './exercices/product-list/product-list.component';
 import { FormulaireComponent } from './demo/formulaire/formulaire.component';
 import { ExoFormulaireComponent } from './exercices/exo-formulaire/exo-formulaire.component';
+import { RoutingComponent } from './demo/routing/routing.component';
+import { ConsoActivatedRouteComponent } from './demo/conso-activated-route/conso-activated-route.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  // Démonstration
   { path: 'home', component: HomeComponent },
   { path: 'demo1', component: Demo1Component },
   { path: 'demo2', component: Demo2Component },
@@ -25,6 +28,13 @@ const routes: Routes = [
   { path: 'demo-input-output-V-2', component: ParentComponent },
   { path : 'demo-formulaire', component : FormulaireComponent},
   { path : 'demo-service', component : DemoServiceComponent},
+  // j'ajoute un paramètre (id) pour envoyé une information sur la route active
+  { path : 'routing', component : RoutingComponent},
+  { path : 'conso-activated-route/:id', component : ConsoActivatedRouteComponent},
+
+
+
+  // Exercice
   { path: 'exercice1', component: Exercice1Component },
   { path: 'exercice2', component: Exercice2Component },
   { path: 'article-liste-directive', component: ArticleListeDirectiveComponent },
