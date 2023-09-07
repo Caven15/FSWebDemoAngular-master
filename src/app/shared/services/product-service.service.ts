@@ -20,6 +20,11 @@ export class ProductServiceService {
     return this._products;
   }
 
+  // R => readOne
+  getProduit(id : number) : Product{
+    return this._products[id]
+  }
+
   // U => Update
   updateProduit(updatedProduit : Product){
     const index = this._products.findIndex((product) => product.id === updatedProduit.id)

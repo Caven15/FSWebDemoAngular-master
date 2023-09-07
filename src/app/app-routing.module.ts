@@ -13,6 +13,7 @@ import { ExoBouttonClickParentComponent } from './exercices/exo-boutton-click-pa
 import { DemoServiceComponent } from './demo/demo-service/demo-service.component';
 import { ProductListComponent } from './exercices/product-list/product-list.component';
 import { FormulaireComponent } from './demo/formulaire/formulaire.component';
+import { ExoFormulaireComponent } from './exercices/exo-formulaire/exo-formulaire.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'article-liste-directive', component: ArticleListeDirectiveComponent },
   { path: 'exo-boutton-click', component: ExoBouttonClickParentComponent },
   { path: 'product-list', component: ProductListComponent},
+  { path: 'exo-formulaire', component : ExoFormulaireComponent}
 ];
 
 

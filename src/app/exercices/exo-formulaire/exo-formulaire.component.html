@@ -1,0 +1,30 @@
+<fieldset>
+  <legend>Récupérer les informations du produit</legend>
+  <input type="number" [(ngModel)]="idARecup">
+  <button type="button" (click)="recupererProduit()">Récuperer</button>
+  <div *ngIf="messageErreur" class="error-form">
+    {{messageErreur}}
+  </div>
+</fieldset>
+
+
+<fieldset>
+  <legend>Mettre à jour les informations</legend>
+  <form [formGroup]="updateForm" (ngSubmit)="soumettreFormulaire()">
+    <div>
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" formControlName="nom" value="{{produitToUpdate.nom}}">
+    </div>
+    <div>
+      <label for="description">Description</label>
+      <input type="text" id="description" formControlName="description" value="{{produitToUpdate.description}}">
+    </div>
+    <div>
+      <label for="prix">Prix</label>
+      <input type="number" id="prix" formControlName="prix" value="{{produitToUpdate.prix}}">
+    </div>
+    <div>
+      <button type="submit">Valider</button>
+    </div>
+  </form>
+</fieldset>

@@ -21,8 +21,8 @@ import { ExoBouttonClickComponent } from './exercices/exo-boutton-click/exo-bout
 import { ExoBouttonClickParentComponent } from './exercices/exo-boutton-click-parent/exo-boutton-click-parent.component';
 import { DemoServiceComponent } from './demo/demo-service/demo-service.component';
 import { ProductListComponent } from './exercices/product-list/product-list.component';
+import { ExoFormulaireComponent } from './exercices/exo-formulaire/exo-formulaire.component';
 import { FormulaireComponent } from './demo/formulaire/formulaire.component';
-
 
 @NgModule({
   declarations: [
@@ -39,11 +39,12 @@ import { FormulaireComponent } from './demo/formulaire/formulaire.component';
     ParentComponentComponent,
     ChildComponent,
     ParentComponent,
+    FormulaireComponent,
     ExoBouttonClickComponent,
     ExoBouttonClickParentComponent,
     DemoServiceComponent,
     ProductListComponent,
-    FormulaireComponent,
+    ExoFormulaireComponent,
   ],
   imports: [
     BrowserModule,
