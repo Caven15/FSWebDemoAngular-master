@@ -25,6 +25,7 @@ import { ExoFormulaireComponent } from './exercices/exo-formulaire/exo-formulair
 import { FormulaireComponent } from './demo/formulaire/formulaire.component';
 import { RoutingComponent } from './demo/routing/routing.component';
 import { ConsoActivatedRouteComponent } from './demo/conso-activated-route/conso-activated-route.component';
+import { GuardComponent } from './demo/guard/guard.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { ConsoActivatedRouteComponent } from './demo/conso-activated-route/conso
     ExoFormulaireComponent,
     RoutingComponent,
     ConsoActivatedRouteComponent,
+    GuardComponent,
   ],
   imports: [
     BrowserModule,

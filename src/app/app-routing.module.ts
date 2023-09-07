@@ -16,6 +16,8 @@ import { FormulaireComponent } from './demo/formulaire/formulaire.component';
 import { ExoFormulaireComponent } from './exercices/exo-formulaire/exo-formulaire.component';
 import { RoutingComponent } from './demo/routing/routing.component';
 import { ConsoActivatedRouteComponent } from './demo/conso-activated-route/conso-activated-route.component';
+import { GuardComponent } from './demo/guard/guard.component';
+import { authGuard } from './shared/guard/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -28,10 +30,11 @@ const routes: Routes = [
   { path: 'demo-input-output-V-2', component: ParentComponent },
   { path : 'demo-formulaire', component : FormulaireComponent},
   { path : 'demo-service', component : DemoServiceComponent},
-  // j'ajoute un paramètre (id) pour envoyé une information sur la route active
+  // j'ajoute un paramètre (id) pour envoyé une information sur la route active.
   { path : 'routing', component : RoutingComponent},
   { path : 'conso-activated-route/:id', component : ConsoActivatedRouteComponent},
-
+  // Ajout d'un can activate dans le but de sécuriser l'accès au composant.
+  { path : 'demo-guard', canActivate : [authGuard] , component : GuardComponent},
 
 
   // Exercice
