@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +29,7 @@ import { ConsoActivatedRouteComponent } from './demo/conso-activated-route/conso
 import { GuardComponent } from './demo/guard/guard.component';
 import { FakeLoginComponent } from './demo/fake-login/fake-login.component';
 import { ObservableComponent } from './demo/observable/observable.component';
+import { ConsoApiComponent } from './demo/conso-api/conso-api.component';
 
 @NgModule({
   declarations: [
@@ -55,13 +57,15 @@ import { ObservableComponent } from './demo/observable/observable.component';
     GuardComponent,
     FakeLoginComponent,
     ObservableComponent,
+    ConsoApiComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     SharedModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

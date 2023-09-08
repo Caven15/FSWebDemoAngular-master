@@ -20,6 +20,7 @@ import { GuardComponent } from './demo/guard/guard.component';
 import { authGuard } from './shared/guard/auth.guard';
 import { FakeLoginComponent } from './demo/fake-login/fake-login.component';
 import { ObservableComponent } from './demo/observable/observable.component';
+import { ConsoApiComponent } from './demo/conso-api/conso-api.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -39,6 +40,7 @@ const routes: Routes = [
   { path : 'demo-guard', canActivate : [authGuard] , component : GuardComponent},
   { path : 'demo-fake-login' , component : FakeLoginComponent},
   { path : 'demo-observable' , component : ObservableComponent},
+  { path : 'conso-api' , component : ConsoApiComponent},
 
 
   // Exercice

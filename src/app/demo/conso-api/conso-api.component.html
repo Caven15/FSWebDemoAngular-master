@@ -1,0 +1,9 @@
+<div *ngIf="found; else notPokemon">
+  <div>Nom    : {{currentPokemon.name}}</div>
+  <div>Taille : {{currentPokemon.height}}</div>
+  <div>Poids  : {{currentPokemon.weight}}</div>
+</div>
+
+<ng-template #notPokemon class="error-form">
+  <h2>Aucune correspondance....</h2>
+</ng-template>
