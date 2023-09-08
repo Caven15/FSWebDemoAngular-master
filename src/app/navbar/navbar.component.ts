@@ -8,14 +8,33 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  isConnected : boolean = false;
+  email : string | null = this._nomFakeAuth.getEmailConnected();
 
   constructor(
     private _nomFakeAuth : FakeAuthService,
     private _nomRouter : Router
-  ){}
+  ){
+    this._nomFakeAuth.CurrentUser.subscribe({
 
-  isConnected : boolean = this._nomFakeAuth.isConnected();
-  email : string | null = this._nomFakeAuth.getEmailConnected();
+      next : (data) => {
+        console.log(`voici mon data au subscribe ${data}`)
+        if (data !== '') {
+          this.isConnected = true
+        }
+        else{
+          this.isConnected = false
+        }
+      },
+      error : (error) => {
+        console.log(`L'erreur suivante à été relevé : \n${error}`)
+      },
+      complete : () => {
+        console.log("Je suis arrivé au complete !")
+      }
+    })
+  }
+
 
   ngOnInit(){
     console.log("Chargement de la nav-bar");

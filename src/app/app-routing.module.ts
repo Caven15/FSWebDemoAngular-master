@@ -19,6 +19,7 @@ import { ConsoActivatedRouteComponent } from './demo/conso-activated-route/conso
 import { GuardComponent } from './demo/guard/guard.component';
 import { authGuard } from './shared/guard/auth.guard';
 import { FakeLoginComponent } from './demo/fake-login/fake-login.component';
+import { ObservableComponent } from './demo/observable/observable.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -37,6 +38,7 @@ const routes: Routes = [
   // Ajout d'un can activate dans le but de sécuriser l'accès au composant.
   { path : 'demo-guard', canActivate : [authGuard] , component : GuardComponent},
   { path : 'demo-fake-login' , component : FakeLoginComponent},
+  { path : 'demo-observable' , component : ObservableComponent},
 
 
   // Exercice

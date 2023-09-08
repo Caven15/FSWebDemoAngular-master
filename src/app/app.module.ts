@@ -27,6 +27,7 @@ import { RoutingComponent } from './demo/routing/routing.component';
 import { ConsoActivatedRouteComponent } from './demo/conso-activated-route/conso-activated-route.component';
 import { GuardComponent } from './demo/guard/guard.component';
 import { FakeLoginComponent } from './demo/fake-login/fake-login.component';
+import { ObservableComponent } from './demo/observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { FakeLoginComponent } from './demo/fake-login/fake-login.component';
     ConsoActivatedRouteComponent,
     GuardComponent,
     FakeLoginComponent,
+    ObservableComponent,
   ],
   imports: [
     BrowserModule,
