@@ -1,4 +1,10 @@
 <nav>
+    <div *ngIf="isConnected; else notConnected">
+      Bonjour, {{email}} 😘 <button (click)="logout()">🔴</button>
+    </div>
+    <ng-template #notConnected>
+      <a (click)="getConnexion()">Connexion</a>
+    </ng-template>
     <ul>
         <li><a routerLink="home">Home</a></li>
         <fieldset>
@@ -13,6 +19,7 @@
           <li><a routerLink="demo-formulaire">Formulaire</a></li>
           <li><a routerLink="routing">Routing</a></li>
           <li><a routerLink="demo-guard">Guard</a></li>
+          <li><a routerLink="demo-fake-login">FakeLogin</a></li>
 
 
 
